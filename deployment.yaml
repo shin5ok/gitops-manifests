@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: gcr.io/$PROJECT_ID/container-handson:$SHORT_SHA
+        image: gcr.io/$shingo-oki02/container-handson:$c9f713a
         ports:
         - containerPort: 8080
         resources:
