@@ -9,5 +9,5 @@ spec:
       paths:
       - path: /*
         backend:
-          serviceName: gitops-test
+          serviceName: gitops-test-loadbalancer
           servicePort: 8080
