@@ -36,16 +36,3 @@ spec:
             cpu: "0.5"
           requests:
             cpu: "0.25"
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: gitops-test
-spec:
-  type: NodePort
-  selector:
-    app: gitops-test
-  ports:
-  - protocol: TCP
-    port: 8080
-    targetPort: 8080
