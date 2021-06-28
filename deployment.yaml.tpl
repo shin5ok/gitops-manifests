@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: gcr.io/$GOOGLE_CLOUD_PROJECT/container-handson:v1
+        image: gcr.io/$PROJECT_ID/container-handson:$SHORT_SHA
         ports:
         - containerPort: 8080
         resources:
