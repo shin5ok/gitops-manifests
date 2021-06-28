@@ -15,20 +15,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: container-handson-deployment
+  name: gitops-test-deployment
 spec:
   selector:
     matchLabels:
-      app: container-handson
+      app: gitops-test
   replicas: 1
   template:
     metadata:
       labels:
-        app: container-handson
+        app: gitops-test
     spec:
       containers:
       - name: myapp
-        image: gcr.io/$PROJECT_ID/container-handson:$SHORT_SHA
+        image: gcr.io/PROJECT_ID/gitops-test:SHORT_SHA
         ports:
         - containerPort: 8080
         resources:
@@ -36,16 +36,3 @@ spec:
             cpu: "0.5"
           requests:
             cpu: "0.25"
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: container-handson
-spec:
-  type: NodePort
-  selector:
-    app: container-handson
-  ports:
-  - protocol: TCP
-    port: 8080
-    targetPort: 8080
