@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: gcr.io/shingo-oki02/gitops-test:58b0509
+        image: gcr.io/shingo-anthos-vmware0910/gitops-test:b6ead13
         ports:
         - containerPort: 8080
         resources:
